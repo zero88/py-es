@@ -1,0 +1,26 @@
+{
+  "local": {
+    "urls": ["http://127.0.0.1:9200"]
+  },
+  "prod": {
+    "urls": ["https://production:9200"],
+    "http_auth": "user:password",
+    "extras": {
+      "use_ssl": true,
+      "verify_certs": true
+    }
+  },
+  "aws": {
+    "urls": ["https://aws:443"],
+    "extras": {
+      "use_ssl": true,
+      "verify_certs": true
+    },
+    "auth": {
+      "access_key": "",
+      "secret_key": "",
+      "region": "us-east-1",
+      "service": "es"
+    }
+  }
+}
