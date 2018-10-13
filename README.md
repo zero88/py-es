@@ -27,7 +27,7 @@ optional arguments:
 Before execute `run.py`:
 
 - Adapt your config file as follow [config.json](./config.json)
-- Customize your `converter` as follow [converter.py](./converter.py)
+- Customize your `converter` as follow [converter.py](./converter.py). Ensure this file has function [`transform(datum: dict) -> dict`](./converter.py#L17)
 
 ## TODO
 
