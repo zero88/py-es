@@ -18,6 +18,6 @@ def transform(datum: dict) -> dict:
     datum = {k.lower(): v for k, v in datum.items()}
     key_id = datum.get('_id', None)
     datum['_id'] = (key_id.get('$oid', None) if isinstance(key_id, dict) else (key_id or datum.get('id', None))) or uuid.uuid4()
-    datum['_active'] = __to_bool__(datum.get('_active', None))
-    datum['_indexed_date'] = datetime.utcnow()
+    datum['active'] = __to_bool__(datum.get('active', None))
+    datum['indexed_date'] = datetime.utcnow()
     return datum
